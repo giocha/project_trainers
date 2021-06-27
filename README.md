@@ -57,7 +57,7 @@
       set DEBUG=_*
 
 
-#### #. Tasks List
+#### #. Task List
 
 > **Yet** to be completed || 27.06.2021
 
