@@ -7,8 +7,8 @@ const _ = require('debug')('_ route_'+path.basename(__filename,path.extname(__fi
 // ? Routers (Start)
 const indexRouter = require('./routes/index')
 const trainerRouter = require('./routes/trainer')
-
 // ? Routers (End)
+
 
 // ! Requires (End)
 
@@ -22,11 +22,12 @@ app.set(express.json())
 app.use(express.urlencoded({extended: true}))
 app.use(express.static(path.join(__dirname, 'client')))
 
+
 // ! Urls (Start)
 app.use('/', indexRouter)
 app.use('/trainers', trainerRouter)
-
 // ! Urls (End)
+
 
 // Server on port
 const port = process.env.PORT || 3005
