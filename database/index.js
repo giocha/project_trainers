@@ -29,11 +29,8 @@ const database_procedure = (myQuery, mysql, config, param = []) => {
                 } catch (error) {
                   throw error;
                 } finally {
-                  connection.end(() =>
-                    console.log("Disconnected from MySQl .")
-                  );
-                }
-             });
+                  connection.end(() => console.log("Disconnected from MySQl ."));
+                }});
           });
        }),
      };
