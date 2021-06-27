@@ -57,12 +57,19 @@
       set DEBUG=_*
 
 
+#### #. Tasks List
+
+> **Yet** to be completed
+
+- [ ] Views 
+- [ ] Routes
+- [ ] Validation
+- [ ] CSS fully tested
+
+
+
 ## Additional info for this project with Node.js (***Required***)
 
 - Express :<https://www.npmjs.com/package/express>
 -  MySQL  :<https://www.npmjs.com/package/mysql2>
 -    EJS  :<https://www.npmjs.com/package/ejs>
-
-
-
-
