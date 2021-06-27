@@ -1,0 +1,6 @@
+				// console.log(Object.values(ress.result.info)[14])
+				// console.log(Object.keys(ress.result))
+				// console.log(ress.result)
+				// console.log(trainer.getTrainerId)
+				// console.log(parseInt(req.body.id))
+				// console.log(editCurrentTrainer.trainer_id)
