@@ -59,7 +59,7 @@
 
 #### #. Tasks List
 
-> **Yet** to be completed || 2021.06.27
+> **Yet** to be completed || 27.06.2021
 
 - [ ] Views 
 - [ ] Routes
