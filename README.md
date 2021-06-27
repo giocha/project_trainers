@@ -50,16 +50,19 @@
       set PORT=<port_number>
 
 
-## Additional info for this project with Node.js (***Required***)
-
-1. Express :<https://www.npmjs.com/package/express>
-2. MySQL   :<https://www.npmjs.com/package/mysql2>
-3. EJS     :<https://www.npmjs.com/package/ejs>
-
-
 #### 5. Debug, 
 
 > Other than debug explicitly, it is used to show some specific info in terminal (windows terminal)
 
       set DEBUG=_*
+
+
+## Additional info for this project with Node.js (***Required***)
+
+- Express :<https://www.npmjs.com/package/express>
+-  MySQL  :<https://www.npmjs.com/package/mysql2>
+-    EJS  :<https://www.npmjs.com/package/ejs>
+
+
+
 
