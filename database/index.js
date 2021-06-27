@@ -17,25 +17,22 @@ const deleteCurrentTrainer = `DELETE FROM trainers_ WHERE trainer_id=?;`
  const database_procedure = (myQuery, mysql, config, param = []) => {
    const connection = mysql.createConnection(config);
    return async function database_results() {
-     return {
-       result: await new Promise((resolve, reject) => {
+     return { result: await new Promise((resolve, reject) => {
          connection.connect((err) => {
-           err
-             ? console.log("Error Connecting to server .")
-             : connection.query(myQuery, param, (error, result) => {
+			  err 
+			  ? console.log("Error Connecting to server .") 
+			  : connection.query(myQuery, param, (error, result) => {
                  try {
                    resolve(result);
                    console.log("Server Successfully responded .");
                  } catch (error) {
                    throw error;
                  } finally {
-                   connection.end(() =>
-                     console.log("Disconnected from MySQl .")
-                   );
+                   connection.end(() => console.log("Disconnected from MySQl ."));
                  }
                });
-         });
-       }),
+         	});
+       	}),
      };
    };
  };
