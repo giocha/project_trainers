@@ -31,11 +31,11 @@ const database_procedure = (myQuery, mysql, config, param = []) => {
                 } finally {
                   connection.end(() => console.log("Disconnected from MySQl ."));
                 }});
-          });
-       }),
-     };
+          	 });
+		  }),
+        };
+      };
    };
-};
 
 module.exports = { 
 	getAllTrainers,
@@ -44,5 +44,4 @@ module.exports = {
 	updateCurrentTrainer,
 	deleteCurrentTrainer,
 	database_procedure,
-	alter_id
-}
+					}
