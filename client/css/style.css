@@ -122,6 +122,7 @@ span a:hover,span a:focus,span a:active {
 	color: rgb(240, 240, 240);
 	
 	
+	
 }
 
 
@@ -142,11 +143,36 @@ span a:hover,span a:focus,span a:active {
 
 .edit {
 
-	background-color: #80bb92;
+	background-color: #bbe2c7;
+}
+
+input {
+	border: none;
+	border-radius: 10px;
+	padding: 5px;
+	outline:none;
+	background-color: #ecf0f3;
+	box-shadow: inset 6px 6px 6px #cbced1, inset -6px -6px 6px white;
 
 }
 
+input[type=submit] {
 
+	padding: 10px;
+	border-radius: 20px;
+	cursor: pointer;
+	font-family: 'Mate SC', serif;
+}
+
+input[type=submit]:hover {
+
+	background-color:#0f7c30 ;
+	box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2), -1px -1px 8px rgba(0, 0, 0, 0.2);
+	transition: all 0.2s ease-in;
+	text-decoration: none;
+	color: white;
+	
+}
 
 
 
