@@ -1,3 +1,4 @@
+
 // Queries . 
 const getAllTrainers = `SELECT * FROM trainers_`
 const getSingleTrainer = `SELECT * FROM trainers_ WHERE trainers_id =?`
