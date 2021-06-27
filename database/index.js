@@ -8,10 +8,10 @@ const deleteCurrentTrainer = `DELETE FROM trainers_ WHERE trainer_id=?;`
 
 
 /**
- * @param  {} myQuery query SQL.
- * @param  {} mysql required database.
- * @param  {} config required configuration - connecting to database.
- * @param  {} param=[]  Parameterized SQL query | Optional, empty.
+ * @param  (string query FORMAT) myQuery query SQL.
+ * @param  (module) mysql required database.
+ * @param  (.json) config required configuration - connecting to database.
+ * @param  (array) param=[]  Parameterized SQL query | Optional, empty.
  */
 
 const database_procedure = (myQuery, mysql, config, param = []) => {
