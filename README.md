@@ -1,4 +1,4 @@
-# A trainers modelization
+# A Trainers Modelization
 
 *Implementation of a CRUD using MVC for the model ~Trainer.*
 
