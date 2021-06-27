@@ -58,12 +58,11 @@ const Trainer = (() => {
 		get getTrainerDetails () {
 
 			return {
-						trainer_id : this.getTrainerId,
-						first_name : this.getFirstName,
-						last_name  : this.getLastName,
-						subject    : this.getSubject
-
-					}
+				trainer_id : this.getTrainerId,
+				first_name : this.getFirstName,
+				last_name  : this.getLastName,
+				subject    : this.getSubject
+			}
 		}
 	}
 
