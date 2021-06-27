@@ -35,12 +35,6 @@ function deleteTrainer(param) {
 	return database_procedure(deleteCurrentTrainer,mysql,config,param)
 }
 
-function alterId() {
-
-	return database_procedure(alter_id,mysql,config)
-}
-
-
 
 
 module.exports = {

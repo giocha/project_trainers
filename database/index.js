@@ -6,7 +6,6 @@ const updateCurrentTrainer = `UPDATE trainers_ SET first_name=?, last_name=?, su
 const deleteCurrentTrainer = `DELETE FROM trainers_ WHERE trainer_id=?;`
 
 
-
 /**
  * @param  (string query FORMAT) myQuery query SQL.
  * @param  (module) mysql required database.
