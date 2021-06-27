@@ -57,5 +57,9 @@
 3. EJS     :<https://www.npmjs.com/package/ejs>
 
 
+#### 5. Debug, 
 
+> Other than debug explicitly, it is used to show some specific info in terminal (windows terminal)
+
+      set DEBUG=_*
 
