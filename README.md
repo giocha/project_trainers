@@ -1,4 +1,4 @@
-# Trainers modeling
+# A Trainers Modelization
 
 *Implementation of a CRUD using MVC for the model ~Trainer.*
 
@@ -57,9 +57,9 @@
       set DEBUG=_*
 
 
-#### #. Tasks List
+#### #. Task List
 
-> **Yet** to be completed
+> **Yet** to be completed || 27.06.2021
 
 - [ ] Views 
 - [ ] Routes

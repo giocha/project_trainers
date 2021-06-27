@@ -6,9 +6,14 @@ const _ = require('debug')('_ route_'+path.basename(__filename,path.extname(__fi
 
 // ? Routers (Start)
 const indexRouter = require('./routes/index')
+<<<<<<< HEAD
 // const trainerRouter = require('./routes/trainer')
 
+=======
+const trainerRouter = require('./routes/trainer')
+>>>>>>> f06fb7e81a75ac50db2856a0378e319cb66b72fb
 // ? Routers (End)
+
 
 // ! Requires (End)
 
@@ -22,11 +27,17 @@ app.set(express.json())
 app.use(express.urlencoded({extended: true}))
 app.use(express.static(path.join(__dirname, 'client')))
 
+
 // ! Urls (Start)
 app.use('/', indexRouter)
+<<<<<<< HEAD
 // app.use('/trainers', trainerRouter)
 
+=======
+app.use('/trainers', trainerRouter)
+>>>>>>> f06fb7e81a75ac50db2856a0378e319cb66b72fb
 // ! Urls (End)
+
 
 // Server on port
 const port = process.env.PORT || 3005
