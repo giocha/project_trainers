@@ -65,6 +65,7 @@
 - [x] Routes || Completed 
 - [x] Validation
 - [ ] CSS fully tested
+- [ ] OPTIONAL || Search bar
 
 
 
