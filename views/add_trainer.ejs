@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+	<table class="table">
+		<thead>
+			<tr id="header">
+				<th>ID</th>
+				<th>First Name</th>
+				<th>Last Name</th>
+				<th colspan="2">Subject</th>
+			
+			</tr>
+		</thead>
+	<tbody>
+		<tr>
+		<% trainer_.forEach(function(trainer){%>
+				<td id="id"><%=trainer.trainer_id %></td>
+				<td><%=trainer.first_name %></td>
+				<td><%=trainer.last_name %></td>
+				<td ><%=trainer.subject %></td>
+			</tr>
+		<% }); %>
+		<tr>
+			<form action="/" method="POST">
+					<td id="id">#</td>
+					<td><input type="text" name="fname"></td>
+					<td><input type="text" name="lname"></td>
+					<td><input type="text" name="sub"></td>
+					<td><span><input type="submit" value="Submit"></span></td>
+				</form>
+			</tr>
+	
+	</tbody>
+
+</table>
+
+  </body>
+</html>
