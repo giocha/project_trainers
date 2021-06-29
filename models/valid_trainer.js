@@ -24,6 +24,6 @@ b.	For each argument performs a validation for:
 		v. Spaces between characters
 		vi.	Accepts only chars a-z, A-Z
 		vii. numbers are not allowed in any case: 5, '5', test5, 5test te5st
-c.	Each performing validation returns a state (TRUE for valid OR an array with non-acceptable values),
+c.	Each performing validation returns a state (Value for valid OR an array with non-acceptable values),
 	
 */
