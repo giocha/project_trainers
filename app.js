@@ -7,9 +7,7 @@ const _ = require('debug')('_ route_'+path.basename(__filename,path.extname(__fi
 // ? Routers (Start)
 const indexRouter = require('./routes/index')
 // const trainerRouter = require('./routes/trainer')
-
 // ? Routers (End)
-
 
 // ! Requires (End)
 
@@ -26,8 +24,6 @@ app.use(express.static(path.join(__dirname, 'client')))
 
 // ! Urls (Start)
 app.use('/', indexRouter)
-// app.use('/trainers', trainerRouter)
-
 // ! Urls (End)
 
 
@@ -35,5 +31,5 @@ app.use('/', indexRouter)
 const port = process.env.PORT || 3005
 app.listen(port,
 	 err => err 
-	? `Problem on port ${err}`
-	:  _(`Server running on ${port} port`))
+	? console.log(`Problem on port ${err}`)
+	:  console.log(`Server running on ${port} port`))

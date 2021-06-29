@@ -22,17 +22,18 @@
 	<tbody>
 		<% trainer_.forEach(function(trainer){ if (single.trainer_id == trainer.trainer_id) {%>
 		
-		<tr class="edit">
-			<form action="/edit/" method="POST">
-				<!-- <td><input type="text" name="id" value='<%= single.trainer_id %>' readonly></td> -->
-				
-				<td><input type="text" name="id" value='<%= single.trainer_id %>' aria-hidden="true" hidden></td>
-				<td><input type="text" name="fname" value='<%= single.first_name %>'></td>
-				<td><input type="text" name="lname" value='<%= single.last_name %>'></td>
-				<td><input type="text" name="sub" value='<%= single.subject %>'></td>
-				<td><span><input type="submit" value="Submit"></span></td>
-			</form>
-		</tr>
+			<tr class="edit">
+				<form action="/edit/" method="POST">
+					<!-- <td><input type="text" name="id" value='<%= single.trainer_id %>' readonly></td> -->
+			
+					<td><input type="text" name="id" value='<%= single.trainer_id %>' aria-hidden="true" hidden></td>
+					<td><input type="text" name="fname" value='<%= single.first_name %>'></td>
+					<td><input type="text" name="lname" value='<%= single.last_name %>'></td>
+					<td><input type="text" name="sub" value='<%= single.subject %>'></td>
+					<td><span><input type="submit" value="Submit"></span></td>
+					
+				</form>
+			</tr>
 		<% }else { %>
 			<tr>
 				<td id="id"><%=trainer.trainer_id %></td>

@@ -1,3 +1,5 @@
+const nameValid = require('./valid_trainer').nameValid
+
 const Trainer = (() => {
 
 	const _trainer_id = new WeakMap();
@@ -41,12 +43,13 @@ const Trainer = (() => {
 
 		set setFirstName (val) {
 			
-			_first_name.set(this,val)
+			if(nameValid(val)) _first_name.set(this,val)
 		}
 
 		set setLastName (val) {
-
-			_last_name.set(this,val)
+			
+			if(nameValid(val) == val) {_last_name.set(this, nameValid(val))}
+			
 		}
 
 		set setSubject (val) {

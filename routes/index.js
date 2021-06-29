@@ -45,9 +45,14 @@ indexRouter.post('/edit', (req, res) => {
 
 	trainer.setFirstName = req.body.fname
 	trainer.setLastName = req.body.lname
+	console.log('first name: ', trainer.getFirstName)
+	console.log('last name: ', trainer.getLastName)
 	trainer.setSubject = req.body.sub
 	trainer.setId =req.body.id
-		if(storeId == req.body.id){
+		if(storeId == req.body.id  ){
+			if(typeof(trainer.getFirstName) !== 'string' || typeof(trainer.getLastName) !== 'string') {
+				
+			}
 			updateTrainer([trainer.getFirstName, trainer.getLastName, trainer.getSubject, trainer.getTrainerId])().then( result => {
 					res.redirect('/')
 			})
@@ -64,10 +69,19 @@ indexRouter.get('/add', (req, res) => {
 })
 // Post a new trainer.
 indexRouter.post('/', (req, res) => {
-
-	insertTrainer([req.body.fname, req.body.lname, req.body.sub])().then(result => {
+	trainer.setFirstName = req.body.fname
+	trainer.setLastName = req.body.lname
+	trainer.setSubject = req.body.sub
+	insertTrainer([trainer.getFirstName, trainer.getLastName, trainer.getSubject])().then(result => {
 		res.redirect('/')
 	})
+})
+
+// Search bar.
+indexRouter.get('/:ing', (req, res) => {
+
+	
+
 })
 
 
