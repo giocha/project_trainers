@@ -61,9 +61,9 @@
 
 > **Yet** to be completed || 27.06.2021
 
-- [ ] Views || EDIT: ADD and ERROR remains. 
-- [ ] Routes || EDIT: CREATE method remains. 
-- [ ] Validation
+- [ ] Views || EDIT:ERROR remains. 
+- [x] Routes || Completed 
+- [x] Validation
 - [ ] CSS fully tested
 
 
