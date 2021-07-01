@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html>
+
   <head>
+	
     <title><%= title %></title>
 	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <link rel="stylesheet" href="/css/style.css" />
   </head>
   <body>
     <h1><%= title %></h1>
-	
+
 	<% if (er_message != '') { %> 
 	<div id="er_message">
 		<p><%=er_message%></p>
