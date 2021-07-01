@@ -43,7 +43,7 @@ const Trainer = (() => {
 
 		set setFirstName (val) {
 			
-			if(nameValid(val)) _first_name.set(this,val)
+			if(nameValid(val)) _first_name.set(this,nameValid(val))
 		}
 
 		set setLastName (val) {

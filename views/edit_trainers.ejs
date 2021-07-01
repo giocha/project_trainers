@@ -7,6 +7,12 @@
   </head>
   <body>
     <h1><%= title %></h1>
+	
+	<% if (er_message != '') { %> 
+	<div id="er_message">
+		<p><%=er_message%></p>
+	</div>
+	<% } %>
     
 	<table class="table">
 		<thead>

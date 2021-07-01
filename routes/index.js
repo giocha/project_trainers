@@ -12,6 +12,7 @@ const deleteTrainer = require('../services/trainerService.js').deleteTrainer
 const trainer = new Trainer()
 let storeId;
 let editCurrentTrainer;
+let allTogether
 
 // Show all trainers .
 indexRouter.get('/',(req, res) =>{
@@ -32,12 +33,12 @@ indexRouter.get('/edit/:trainer_id', (req, res) => {
 
 	storeId = req.params.trainer_id
 	allTrainers()().then(result => {
-		const allTogether = []
+		allTogether = []
 		result.result.find( obj => {
 			if( obj.trainer_id === parseInt(storeId)) editCurrentTrainer = obj
 			allTogether.push(obj)
 		})
-	res.render('edit_trainers',{title: 'Update Trainer', trainer_ : allTogether, single : editCurrentTrainer})
+	res.render('edit_trainers',{title: 'Update Trainer', trainer_ : allTogether, single : editCurrentTrainer,er_message:''})
 	})
 })
 // Post Updated trainer.
@@ -50,12 +51,20 @@ indexRouter.post('/edit', (req, res) => {
 	trainer.setSubject = req.body.sub
 	trainer.setId =req.body.id
 		if(storeId == req.body.id  ){
+
+			//TODO  Should be a function 
 			if(typeof(trainer.getFirstName) !== 'string' || typeof(trainer.getLastName) !== 'string') {
-				
+
+				res.render('edit_trainers',{title: 'Update Trainer', trainer_ : allTogether, single : editCurrentTrainer, er_message:'Check your inputs. Only characters are allowed!'})
 			}
+			else{
+
 			updateTrainer([trainer.getFirstName, trainer.getLastName, trainer.getSubject, trainer.getTrainerId])().then( result => {
 					res.redirect('/')
 			})
+			// TODO ====================
+		}
+
 		}else res.render('error')
 })
 
@@ -64,7 +73,7 @@ indexRouter.get('/add', (req, res) => {
 
 	allTrainers()().then(result => {
 
-		res.render('add_trainer',{title : 'New Trainer', trainer_ : result.result})
+		res.render('add_trainer',{title : 'New Trainer', trainer_ : result.result, er_message:''})
 	})
 })
 // Post a new trainer.
@@ -72,9 +81,21 @@ indexRouter.post('/', (req, res) => {
 	trainer.setFirstName = req.body.fname
 	trainer.setLastName = req.body.lname
 	trainer.setSubject = req.body.sub
+
+	if(typeof(trainer.getFirstName) !== 'string' || typeof(trainer.getLastName) !== 'string') {
+
+		allTrainers()().then(result => {
+
+			res.render('add_trainer',{title : 'New Trainer', trainer_ : result.result, er_message:'Check your inputs. Only characters are allowed!'})
+		})
+	}
+	else {
+
 	insertTrainer([trainer.getFirstName, trainer.getLastName, trainer.getSubject])().then(result => {
+
 		res.redirect('/')
 	})
+	}
 })
 
 // Search bar.
