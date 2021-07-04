@@ -21,8 +21,14 @@ const user_inputs = (...args) => {
 	if((arr_index_falsy.includes(0) || arr_index_falsy.includes(1)) && (arr_index_falsy.includes(2) && subject_store === undefined)) 
 	message =`Only characters (a-Z) are allowed as Full Name as well as 'Subject' field can not be empty.`
 
+	if((arr_index_falsy.includes(0) || arr_index_falsy.includes(1)) && (arr_index_falsy.includes(2) && typeof subject_store === typeof [])) 
+	message =`Only characters (a-Z) are allowed as Full Name as well as 'Subject' field can not have more than 25 characters.`
+
 	if ((arr_index_falsy.includes(2) && subject_store === undefined) && !arr_index_falsy.includes(0) && !arr_index_falsy.includes(1)) 
 	message = `Field 'Subject' can not be empty. `
+
+	if ((arr_index_falsy.includes(2) && typeof subject_store === typeof []) && !arr_index_falsy.includes(0) && !arr_index_falsy.includes(1)) 
+	message = `Field 'Subject' can not have more than 25 characters. `
 
 	return message 
 }

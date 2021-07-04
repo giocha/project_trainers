@@ -12,11 +12,24 @@ const nameValid = (...args) => {
 }
 
 const subjectValid = (...args) => {
-
+	let result;
+	let arr = []
+	let counter = [];
 	
+	args.forEach( arg =>{
+		for(let i in arg) counter.push(+i)
+		console.log(counter)
+		if (arg == '' || counter.length > 25 ){
+			arr.push(arg)
+			result = arr
+		}
+		else result = arg
+	})
+	return result
 }
 
-module.exports = {nameValid}
+module.exports = {nameValid,
+					subjectValid}
 
 /* 
 function nameValid :

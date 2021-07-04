@@ -1,4 +1,5 @@
 const nameValid = require('./valid_trainer').nameValid
+const subjectValid = require('./valid_trainer').subjectValid
 
 const Trainer = (() => {
 
@@ -54,7 +55,7 @@ const Trainer = (() => {
 
 		set setSubject (val) {
 
-			_subject.set(this, val)
+			if(subjectValid(val)) {_subject.set(this, subjectValid(val))}
 			
 		}
 
