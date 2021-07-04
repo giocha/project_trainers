@@ -31,3 +31,64 @@
 			// 		res.render('add_trainer',{title : 'New Trainer', trainer_ : result.result, er_message:`Check your ${arg}. Only characters (a-Z) are allowed`})
 			// 	})
 			// }
+
+
+
+
+			// const subjectValid = (...args) => {
+// 	let result;
+// 	let arr = []
+// 	let counter = [];
+// 	let regex = /^[a-zA-Z0-9-]+$/g
+// 	args.forEach( arg =>{
+// 		for(let i in arg) counter.push(+i)
+// 		console.log(counter)
+// 		if (arg == '' || counter.length > 25 || !regex.test(arg) ){
+// 			arr.push(arg)
+// 			result = arr
+// 		}
+// 		else result = arg
+// 	})
+// 	return result
+// }
+
+
+// let x = subjectValid('qwertyuiopajklzxcsda')
+// console.log(x)
+// let p = 'qwertyuiopasdfghjklzxcssd'
+// c = new Array()
+// for(let i in p){
+// 	c.push(+i)
+// }
+// console.log(c.length)
+// console.log([...p])
+// if(c.length == Array(25).length) console.log('ok')
+
+
+// console.log(typeof c)
+// console.log(typeof [])
+// if (typeof c == typeof []) console.log('ok')
+
+
+// const subjectValid = (...args) => {
+// 	let result;
+// 	let arr = []
+// 	let counter = [];
+// 	let regex = /^[a-zA-Z0-9-]+$/g
+// 	args.forEach( arg =>{
+// 		for(let i in arg) counter.push(+i)
+// 		console.log(counter)
+// 		if (arg == '' || counter.length > 25 || !regex.test(arg)){
+// 			arr.push(arg)
+// 			result = arr
+// 		}
+// 		else result = arg
+// 	})
+// 	return result
+// }
+
+
+// let x = subjectValid('')
+// console.log(x)
+
+// if(x == '')console.log('ok')
