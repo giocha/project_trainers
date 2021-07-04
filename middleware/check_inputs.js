@@ -4,8 +4,9 @@ const user_inputs = (...args) => {
 	let subject_store;
 	let arr_index_falsy = []
 	args.forEach((arg, index) => {
+		
 		if (typeof arg !== 'string'){
-
+			
 			if(index == 2 && arg != ''){
 				subject_store = arg
 				console.log(subject_store)
