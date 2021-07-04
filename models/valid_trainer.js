@@ -3,7 +3,7 @@ const nameValid = (...args) => {
 	let arr = []
 	let val
 	
-	for(let i of args) checker = !!i  && /^[a-z]+$/i.test(i) && i!=='undefined' && i!=='null' ? (val = i) : arr.push(i)
+	for(let i of args) checker = !!i  && /^[a-z]{1,25}$/i.test(i) && i!=='undefined' && i!=='null' ? (val = i) : arr.push(i)
 	if (arr.length<1) arr = val
 
 	// console.log('to arr:',arr)
