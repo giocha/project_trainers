@@ -5,6 +5,8 @@ body {
 	padding: 0px;
 	margin: 0;
 	font-family: 'Mate SC', serif;
+	background: linear-gradient(to right, #159957, #155799);
+	
 }
 
 table {
@@ -18,8 +20,6 @@ table {
 	border: 1px solid #bdc3c7;
 	box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2), -1px -1px 8px rgba(0, 0, 0, 0.2);
 	background-color: azure;
-	
-	
 	
 }
 
@@ -48,9 +48,34 @@ td {
 h1 {
 	font-weight: 600;
 	text-align: center;
-	background-color: #1DB954;
+	/* background-color: #1DB954; */
+	background: linear-gradient(to right, #159957, #155799);
 	color: #fff;
 	padding: 10px 0px;
+}
+.error-h1 {
+	background: linear-gradient(to right, #da4453, #89216b);
+	
+}
+
+.back-home {
+	display: none;
+}
+
+.error_message {
+	text-align: center;
+}
+
+.two {
+	background: linear-gradient(to right, #da4453, #89216b);
+}
+
+.td-home:hover + .back-home {
+	
+	
+	display:block;
+	transition: 3s;
+
 }
 
 tr:hover {
@@ -61,6 +86,11 @@ tr:hover {
 
 #id {
 	color:#1DB954 ;
+	
+}
+
+.adder {
+	background-color:#bdc3c7;
 }
 
 
@@ -180,7 +210,7 @@ input[type=submit]:hover {
 #er_message {
 
 	margin: 0 auto;
-	background-color: rgba(255, 0, 0,0.7);
+	background: linear-gradient(to right, #c04848, #480048);
 	width: 50vw;
 	display:flex;
 	align-items: center;
@@ -189,6 +219,15 @@ input[type=submit]:hover {
 	border-radius: 15px;
 	box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2), -1px -1px 8px rgba(0, 0, 0, 0.2);
 	color: white;
+}
+
+a {
+	text-decoration: none;
+}
+
+.title:hover  {
+	font-size:larger;
+	color:linear-gradient(to right, #c04848, #480048);
 }
 
 

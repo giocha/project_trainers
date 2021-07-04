@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="/css/style.css" />
   </head>
   <body>
-    <h1><%= title %></h1>
+    <a href="/" class="title"><h1> <%= title %></h1></a>
 
 	<% if (er_message != '') { %> 
 	<div id="er_message">
@@ -33,7 +33,6 @@
 			<tr class="edit">
 				<form action="/edit/" method="POST">
 					<!-- <td><input type="text" name="id" value='<%= single.trainer_id %>' readonly></td> -->
-			
 					<td><input type="text" name="id" value='<%= single.trainer_id %>' aria-hidden="true" hidden></td>
 					<td><input type="text" name="fname" value='<%= single.first_name %>'></td>
 					<td><input type="text" name="lname" value='<%= single.last_name %>'></td>

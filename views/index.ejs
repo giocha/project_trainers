@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="/css/style.css" />
   </head>
   <body>
-	<h1> <%= title %></h1>
+	<a href="/" class="title"><h1> <%= title %></h1></a>
 	<hr>
 
 	<table class="table">
@@ -28,7 +28,12 @@
 			</tr>
 		</thead>
 	
-	<tbody>
+		<tbody>
+		<tr>
+			<td id="id" class="adder">#</td>
+			<td colspan="5" class="adder"><span><a href="/add">Add a new Trainer</a></span></td>
+			
+		</tr>
 		<tr>
 		<% trainer_.forEach(function(trainer){ %>
 				<td id="id"><%=trainer.trainer_id %></td>
@@ -38,10 +43,6 @@
 				<td><span><a href="/edit/<%=trainer.trainer_id %>">Update</a> <a id="delete" href="/delete/<%=trainer.trainer_id %>">Remove</a></span></td>
 			</tr>
 		<% }); %>
-		<tr>
-			<td id="id">#</td>
-			<td colspan="5"><span><a href="/add">Add a new Trainer</a></span></td>
-		</tr>
 			
 	</tbody>
 </table>

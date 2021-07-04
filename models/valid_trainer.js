@@ -11,6 +11,11 @@ const nameValid = (...args) => {
 
 }
 
+const subjectValid = (...args) => {
+
+	
+}
+
 module.exports = {nameValid}
 
 /* 
