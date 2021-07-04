@@ -219,6 +219,7 @@ input[type=submit]:hover {
 	border-radius: 15px;
 	box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2), -1px -1px 8px rgba(0, 0, 0, 0.2);
 	color: white;
+	padding: 10px;
 }
 
 a {
