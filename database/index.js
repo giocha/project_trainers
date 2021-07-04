@@ -1,10 +1,10 @@
 
 // Queries . 
-const getAllTrainers = `SELECT * FROM trainers_`
-const getSingleTrainer = `SELECT * FROM trainers_ WHERE trainers_id =?`
-const insertNewTrainer = `INSERT INTO trainers_ (first_name,last_name,subject) VALUES (?,?,?)`
-const updateCurrentTrainer = `UPDATE trainers_ SET first_name=?, last_name=?, subject=? WHERE trainer_id = ?` 
-const deleteCurrentTrainer = `DELETE FROM trainers_ WHERE trainer_id=?;`
+const getAllTrainers = `SELECT * FROM cb12ptjs.trainers_`
+const getSingleTrainer = `SELECT * FROM cb12ptjs.trainers_ WHERE trainers_id =?`
+const insertNewTrainer = `INSERT INTO cb12ptjs.trainers_ (first_name,last_name,subject) VALUES (?,?,?)`
+const updateCurrentTrainer = `UPDATE cb12ptjs.trainers_ SET first_name=?, last_name=?, subject=? WHERE trainer_id = ?` 
+const deleteCurrentTrainer = `DELETE FROM cb12ptjs.trainers_ WHERE trainer_id=?;`
 
 
 /**
@@ -24,6 +24,7 @@ const database_procedure = (myQuery, mysql, config, param = []) => {
             ? console.log("Error Connecting to server .")
             : connection.query(myQuery, param, (error, result) => {
                 try {
+				error? console.log(error) : 0
                   resolve(result);
                   console.log("Server Successfully responded .");
                 } catch (error) {

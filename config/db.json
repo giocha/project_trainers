@@ -1,8 +1,10 @@
+
 {
-	"host" : "localhost",
-	"user" : "root",
-	"password" : "123456",
-	"database" : "private_school_",
-	"port" : 3306
+	"host": "ra1.anystream.eu",
+    "port": "5420",
+    "user": "cb12ptjs",
+    "password": "cb12ptjs",
+    "database": "cb12ptjs"
 	
  }
+
