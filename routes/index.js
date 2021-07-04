@@ -57,14 +57,18 @@ indexRouter.post('/edit', (req, res) => {
 		if(storeId == req.body.id  ){
 			if (user_inputs(trainer.getFirstName,trainer.getLastName, trainer.getSubject) != [])
 			{
-				res.render('edit_trainers',{title: 'Update Trainer', trainer_ : allTogether, single : editCurrentTrainer, er_message:user_inputs(trainer.getFirstName,trainer.getLastName, trainer.getSubject)})
+				res.render('edit_trainers',
+				{title: 'Update Trainer',
+				 trainer_ : allTogether,
+				single : editCurrentTrainer, 
+				er_message:user_inputs(trainer.getFirstName,trainer.getLastName, trainer.getSubject)
+				})
 			}
 			else{
 			updateTrainer([trainer.getFirstName, trainer.getLastName, trainer.getSubject, trainer.getTrainerId])().then( result => {
 					res.redirect('/')
-			})
-			// TODO ====================
-		}
+				})
+			}
 
 		}else res.render('error')
 })
