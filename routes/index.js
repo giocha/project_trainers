@@ -18,9 +18,9 @@ let allTogether
 // Show all trainers .
 indexRouter.get('/',(req, res) =>{
 
-		allTrainers()().then(result => {
-			res.render('index', {title : 'Trainers', trainer_ : result.result })
-		})
+	allTrainers()().then(result => {
+		res.render('index', {title : 'Trainers', trainer_ : result.result })
+	})
 })
 
 // Delete selected trainer.
@@ -85,11 +85,11 @@ indexRouter.post('/', (req, res) => {
 	trainer.setSubject = req.body.sub
 
 	if (user_inputs(trainer.getFirstName,trainer.getLastName, trainer.getSubject) != [])
-			{
-				allTrainers()().then(result => {
-					res.render('add_trainer',{title : 'New Trainer', trainer_ : result.result, er_message:user_inputs(trainer.getFirstName,trainer.getLastName, trainer.getSubject)})
-				})
-			}
+	{
+		allTrainers()().then(result => {
+			res.render('add_trainer',{title : 'New Trainer', trainer_ : result.result, er_message:user_inputs(trainer.getFirstName,trainer.getLastName, trainer.getSubject)})
+			})
+	}
 	else {
 
 	insertTrainer([trainer.getFirstName, trainer.getLastName, trainer.getSubject])().then(result => {
