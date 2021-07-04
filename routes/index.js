@@ -87,7 +87,6 @@ indexRouter.post('/', (req, res) => {
 	if (user_inputs(trainer.getFirstName,trainer.getLastName, trainer.getSubject) != [])
 			{
 				allTrainers()().then(result => {
-
 					res.render('add_trainer',{title : 'New Trainer', trainer_ : result.result, er_message:user_inputs(trainer.getFirstName,trainer.getLastName, trainer.getSubject)})
 				})
 			}

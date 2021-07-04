@@ -28,3 +28,12 @@ const user_inputs = (...args) => {
 
 
 module.exports = { user_inputs }
+
+/* 
+	function user_inputs Is responsible for :
+		a. checking the user inputs and return the appropriate message 
+		b. if any argument is NOT a string then the message responses with an invalid message
+		c. if any argument is a string then the message returned is an empty string
+	
+	This function is used for the routes of the app . and checks whether should return an error message or proceed the functionality 
+*/
