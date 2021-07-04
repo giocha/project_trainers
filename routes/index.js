@@ -55,22 +55,24 @@ indexRouter.post('/edit', (req, res) => {
 	trainer.setSubject = req.body.sub
 	trainer.setId =req.body.id
 		if(storeId == req.body.id  ){
-			if (user_inputs(trainer.getFirstName,trainer.getLastName, trainer.getSubject) != [])
-			{
+			if (user_inputs(trainer.getFirstName,trainer.getLastName, trainer.getSubject) != []){
+				
 				res.render('edit_trainers',
-				{title: 'Update Trainer',
-				 trainer_ : allTogether,
-				single : editCurrentTrainer, 
-				er_message:user_inputs(trainer.getFirstName,trainer.getLastName, trainer.getSubject)
+				{
+					title: 'Update Trainer',
+				 	trainer_ : allTogether,
+					single : editCurrentTrainer, 
+					er_message:user_inputs(trainer.getFirstName,trainer.getLastName, trainer.getSubject)
 				})
 			}
 			else{
 			updateTrainer([trainer.getFirstName, trainer.getLastName, trainer.getSubject, trainer.getTrainerId])().then( result => {
+				
 					res.redirect('/')
 				})
 			}
 
-		}else res.render('error')
+		} else res.render('error')
 })
 
 // Show trainers list at `/add`.
@@ -91,7 +93,12 @@ indexRouter.post('/', (req, res) => {
 	if (user_inputs(trainer.getFirstName,trainer.getLastName, trainer.getSubject) != [])
 	{
 		allTrainers()().then(result => {
-			res.render('add_trainer',{title : 'New Trainer', trainer_ : result.result, er_message:user_inputs(trainer.getFirstName,trainer.getLastName, trainer.getSubject)})
+			res.render('add_trainer',
+				{
+					title : 'New Trainer', 
+					trainer_ : result.result, 
+					er_message:user_inputs(trainer.getFirstName,trainer.getLastName, trainer.getSubject)
+				})
 			})
 	}
 	else {
