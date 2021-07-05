@@ -24,8 +24,7 @@ const database_procedure = (myQuery, mysql, config, param = []) => {
             ? console.log("Error Connecting to server .")
             : connection.query(myQuery, param, (error, result) => {
                 try {
-				error? console.log(error) : 0
-                  resolve(result);
+				  error ? console.log(error) : resolve(result);
                   console.log("Server Successfully responded .");
                 } catch (error) {
                   throw error;

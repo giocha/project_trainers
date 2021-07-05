@@ -50,8 +50,6 @@ indexRouter.post('/edit', (req, res) => {
 
 	trainer.setFirstName = req.body.fname
 	trainer.setLastName = req.body.lname
-	console.log('first name: ', trainer.getFirstName)
-	console.log('last name: ', trainer.getLastName)
 	trainer.setSubject = req.body.sub
 	trainer.setId =req.body.id
 		if(storeId == req.body.id  ){
@@ -116,7 +114,6 @@ indexRouter.get('/:ing', (req, res) => {
 	
 
 })
-
 
 module.exports = indexRouter
 
