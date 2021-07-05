@@ -25,7 +25,11 @@
      npm install
      npm i nodemon (optional)
      
-
+#### Try the app
+      After installation, 
+      run server ( npm run start ),
+      locate your browser and hit localhost:3005
+      
 #### 1. Useful Commands
 
 > This project uses ***nodemon*** as to rr server, **should be installed** to use the below command,
